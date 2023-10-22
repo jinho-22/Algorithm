@@ -1,15 +1,16 @@
+import java.util.StringTokenizer;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine().trim();
         
-        if (input.isEmpty()) {
-            System.out.println(0);
-        } else {
-            String[] words = input.split(" ");
-            System.out.println(words.length);
-        }
+        Scanner str = new Scanner(System.in);
+        
+        String s = str.nextLine();
+        str.close();
+        
+        StringTokenizer st = new StringTokenizer(s, " ");
+        
+        System.out.println(st.countTokens());
     }
 }
